@@ -1,0 +1,5 @@
+package com.vbilenko.demo.ui.controller;
+
+public class UserController {
+
+}

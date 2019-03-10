@@ -1,0 +1,22 @@
+package com.vbilenko.demo.ws.service.impl;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+
+import com.vbilenko.demo.io.entity.UserEntity;
+import com.vbilenko.demo.shared.dto.UserDto;
+import com.vbilenko.demo.ws.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public UserDto createUser(UserDto user) {
+
+		UserEntity userEntity = new UserEntity();
+		BeanUtils.copyProperties(user, userEntity);
+
+		return null;
+	}
+
+}

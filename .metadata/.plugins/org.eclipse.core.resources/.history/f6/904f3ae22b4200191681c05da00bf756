@@ -1,0 +1,13 @@
+package com.vbilenko.demo.io.entity;
+
+import java.io.Serializable;
+
+public class UserEntity implements Serializable {
+
+	private static final long serialVersionUID = 223144394759085091L;
+	
+	@Id
+	private long id;
+	
+
+}

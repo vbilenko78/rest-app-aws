@@ -1,0 +1,4 @@
+spring.datasource.url = jdbc:mysql://localhost:3306/phone_app
+spring.datasource.data-username=vlad
+spring.datasource.data-password=vlad
+spring.jpa.hibernate.ddl-auto = create-drop

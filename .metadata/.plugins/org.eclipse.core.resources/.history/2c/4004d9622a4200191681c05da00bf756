@@ -1,0 +1,14 @@
+package com.vbilenko.demo.ws.service.impl;
+
+import com.vbilenko.demo.shared.dto.UserDto;
+import com.vbilenko.demo.ws.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public UserDto createUser(UserDto user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
