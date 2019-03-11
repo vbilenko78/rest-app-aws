@@ -2,10 +2,14 @@ package com.vbilenko.demo.ws.service.impl;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.vbilenko.demo.UserRepository;
 import com.vbilenko.demo.io.entity.UserEntity;
+import com.vbilenko.demo.shared.Utils;
 import com.vbilenko.demo.shared.dto.UserDto;
 import com.vbilenko.demo.ws.service.UserService;
 
@@ -15,14 +19,25 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	UserRepository userRepository;
 
+	@Autowired
+	Utils utils;
+
+	@Autowired
+	BCryptPasswordEncoder bCryptPasswordEncoder;
+
 	@Override
 	public UserDto createUser(UserDto user) {
+
+		if (userRepository.findByEmail(user.getEmail()) != null) {
+			throw new RuntimeException("Email already exist. Please choose another one!");
+		}
 
 		UserEntity userEntity = new UserEntity();
 		BeanUtils.copyProperties(user, userEntity);
 
-		userEntity.setEncryptedPassword("test");
-		userEntity.setUserId("testUserId");
+		String publicUserId = utils.generateUserId(30);
+		userEntity.setUserId(publicUserId);
+		userEntity.setEncryptedPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
 		UserEntity storedUserDetails = userRepository.save(userEntity);
 
@@ -30,6 +45,11 @@ public class UserServiceImpl implements UserService {
 		BeanUtils.copyProperties(storedUserDetails, returnValue);
 
 		return returnValue;
+	}
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		return null;
 	}
 
 }
