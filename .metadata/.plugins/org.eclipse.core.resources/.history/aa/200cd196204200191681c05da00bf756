@@ -1,8 +1,0 @@
-package com.vbilenko.demo.ui.model.response;
-
-public class UserRest {
-	
-	private String userId;
-	
-
-}

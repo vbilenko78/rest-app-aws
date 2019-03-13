@@ -1,9 +1,0 @@
-package com.vbilenko.demo.shared.dto;
-
-import java.io.Serializable;
-
-public class UserDto implements Serializable {
-	
-	
-
-}

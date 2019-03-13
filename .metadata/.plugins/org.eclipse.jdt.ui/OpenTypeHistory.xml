@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=moile_app_ws/src\/main\/java&lt;com.vbilenko.demo.ws.service{UserService.java[UserService" modifiers="513" timestamp="1552276477000"/>
-<typeInfo handle="=moile_app_ws/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_162.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1513734821000"/>
-<typeInfo handle="=moile_app_ws/\/Users\/vbilenko\/.m2\/repository\/org\/springframework\/data\/spring-data-commons\/2.1.5.RELEASE\/spring-data-commons-2.1.5.RELEASE.jar&lt;org.springframework.data.repository(CrudRepository.class[CrudRepository" modifiers="1537" timestamp="1552102907000"/>
-<typeInfo handle="=moile_app_ws/\/Users\/vbilenko\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.1.5.RELEASE\/spring-data-jpa-2.1.5.RELEASE.jar&lt;org.springframework.data.jpa.repository.support(CrudMethodMetadata.class[CrudMethodMetadata" modifiers="1537" timestamp="1552102907000"/>
-</typeInfoHistroy>
