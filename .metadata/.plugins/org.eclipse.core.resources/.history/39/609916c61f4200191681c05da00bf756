@@ -1,5 +1,0 @@
-package com.vbilenko.demo.ui.model.request;
-
-public class UserDetailsRequestModel {
-
-}
