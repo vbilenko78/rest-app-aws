@@ -9,9 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import com.vbilenko.demo.UserRepository;
 import com.vbilenko.demo.io.entity.UserEntity;
+import com.vbilenko.demo.io.repositories.UserRepository;
 import com.vbilenko.demo.shared.Utils;
 import com.vbilenko.demo.shared.dto.UserDto;
 import com.vbilenko.demo.ws.service.UserService;
